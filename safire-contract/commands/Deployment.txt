@@ -1,0 +1,14 @@
+DeployTokens   => 0x1A6e8f72f309CFA7B7Aca231E65FA1e24D4B8fB0 => amoy
+               => 0xc87f3daf81e8228ed70466fe2fd18e7bdc84078c => base Sepolia
+
+SafireFactory => 0x4dc12173a439e96a31a56850550db1aec2d60631
+
+BaseSepoliaMessenger => 0xab5fe40a3962b8d46912718c5c89f5c610bf181d
+
+AMOYMessenger => 0xe36be621c0792a2a64d5be267ea09a4c266cceb1
+
+DeployLendingLockCondition => 0x7758da40db3abc5d1c244a1a0f52091af269fc45
+
+ETHDiffCondition => 0x172357ef057b37adf2bc8517eee96aec7f1c81d2
+
+SimpleCondition => 0x0b828e93e6c763530a77866d8afe7630ed3bd12a

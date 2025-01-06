@@ -15,10 +15,10 @@ contract DeployPool is Script {
     uint256 private _maturityBlock = _maturityTime * block.number / block.timestamp;
     uint256 private _staleBlock = _staleTime * block.number / block.timestamp;
 
-    address private _asset = 0xb0b001478b069FaC8b849c237f0c0fba790aA630;
-    address private _condition = 0xb0b001478b069FaC8b849c237f0c0fba790aA630;
+    address private _asset = 0xc87F3DaF81e8228ED70466FE2fd18E7bDc84078c;
+    address private _condition = 0x7758Da40db3abC5D1C244A1a0f52091af269fC45;
 
-    ISafireFactory private _factory = ISafireFactory(0x2DA1A7AaB838960a49AC0D62480aD3412b2E8B5B);
+    ISafireFactory private _factory = ISafireFactory(0x4dC12173A439E96a31a56850550db1AEc2d60631);
 
     function run() public {
         uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
@@ -28,8 +28,8 @@ contract DeployPool is Script {
         uint256 _fee = 1000; // 0.01 = 1%
         address _feeTo = address(this);
 
-        string memory _name = "Covid Insurance";
-        string memory _symbol = "COVID";
+        string memory _name = "Lending Lock";
+        string memory _symbol = "Lending";
 
         _factory.createSafireContract(
             _multiplier, _maturityBlock, _staleBlock, _asset, _fee, _feeTo, _condition, _name, _symbol

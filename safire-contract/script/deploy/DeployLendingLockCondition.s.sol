@@ -15,11 +15,11 @@ contract DeployLendingLockCondition is Script {
 
         new LendingLockCondition(
             // BaseSepoliaMessenger = BaseSepolia Sender contract address
-            0x1515Fa830a4025436e9578d2f43542201feff208,
+            0xAb5fe40a3962B8D46912718C5c89F5c610Bf181D,
             // destinationChainSelector = amoy chain selector => https://docs.chain.link/ccip/supported-networks/v1_2_0/testnet
             16281711391670634445,
             // receiver = amoymessenger receiver contract address
-            0x1ebD1DD7CEFAE66661A90AF8C7bA2c18b6207E8F,
+            0xE36bE621c0792A2a64d5BE267EA09A4C266CCeb1,
             // text => for check lending status
             "check_lending_status"
         );

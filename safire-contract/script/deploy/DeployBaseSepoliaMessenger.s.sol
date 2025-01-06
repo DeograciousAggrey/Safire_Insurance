@@ -12,14 +12,14 @@ contract DeployBaseSepoliaMessenger is Script {
         uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
         vm.startBroadcast(deployerPrivateKey);
 
-        // rounter ccip on baseSepolia => 0xD3b06cEbF099CE7DA4AcCf578aaebFDBd6e88a93
+        // router ccip on baseSepolia => 0xD3b06cEbF099CE7DA4AcCf578aaebFDBd6e88a93
         // link token on baseSepolia => 0xE4aB69C077896252FAFBD49EFD26B5D171A32410
 
         BaseSepoliaMessenger messenger = new BaseSepoliaMessenger(
             0xD3b06cEbF099CE7DA4AcCf578aaebFDBd6e88a93, 0xE4aB69C077896252FAFBD49EFD26B5D171A32410
         );
 
-        // onwer address tranfer link to messenger Contract
+        // owner address tranfer link to messenger Contract
         IERC20Metadata link = IERC20Metadata(0xE4aB69C077896252FAFBD49EFD26B5D171A32410);
         // fill 2 link token to messenger contract for link fee
         link.transfer(address(messenger), 1 * 10 ** link.decimals());

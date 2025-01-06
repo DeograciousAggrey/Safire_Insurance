@@ -54,22 +54,22 @@ contract SafirePool is ISafirePool {
     }
 
     modifier onlyNotStale() {
-        require(block.number <= _staleBlock, "Azurance: Stale block passed");
+        require(block.number <= _staleBlock, "Safire: Stale block passed");
         _;
     }
 
     modifier onlyState(State _state) {
-        require(_status == _state, "Azurance: onlyState");
+        require(_status == _state, "Safire: onlyState");
         _;
     }
 
     modifier onlyNotState(State _state) {
-        require(_status != _state, "Azurance: onlyNotState");
+        require(_status != _state, "Safire: onlyNotState");
         _;
     }
 
     modifier onlyCondition() {
-        require(msg.sender == address(_condition), "Azurance: Only condition");
+        require(msg.sender == address(_condition), "Safire: Only condition");
         _;
     }
 
@@ -157,7 +157,7 @@ contract SafirePool is ISafirePool {
     }
 
     function withdrawFee(uint256 _amount) external {
-        require(_status != State.Ongoing, "Azurance: Contract is ongoing");
+        require(_status != State.Ongoing, "Safire: Contract is ongoing");
         // Logic to withdraw platform fees
     }
 
