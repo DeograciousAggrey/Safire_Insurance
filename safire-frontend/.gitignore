@@ -37,3 +37,24 @@ next-env.d.ts
 
 # graphql
 .graphclient
+# Compiler files
+cache/
+out/
+
+# Ignores development broadcast logs
+!/broadcast
+/broadcast/*/31337/
+/broadcast/**/dry-run/
+broadcast/
+
+# Docs
+docs/
+
+# Dotenv file
+.env
+
+# Node modules
+node_modules/
+lib/
+.env*
+**/.env*
