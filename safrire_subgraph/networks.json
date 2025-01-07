@@ -3,6 +3,9 @@
     "SafireFactory": {
       "address": "0x4dc12173a439e96a31a56850550db1aec2d60631",
       "startBlock": 20208568
+    },
+    "Contract": {
+      "address": "0xc87f3daf81e8228ed70466fe2fd18e7bdc84078c"
     }
   }
 }

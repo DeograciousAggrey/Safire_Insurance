@@ -16,11 +16,47 @@ dataSources:
       apiVersion: 0.0.7
       language: wasm/assemblyscript
       entities:
-        - InsuranceCreated
+        - InsurancePool
+        - Token
       abis:
         - name: SafireFactory
           file: ./abis/SafireFactory.json
+        - name: SafirePool
+          file: ./abis/SafirePool.json
+        - name: ERC20
+          file: ./abis/ERC20.json
       eventHandlers:
         - event: InsuranceCreated(indexed address,indexed address,indexed address)
           handler: handleInsuranceCreated
       file: ./src/safire-factory.ts
+
+templates:
+  - name: SafirePool
+    kind: ethereum/contract
+    network: base-sepolia
+    source:
+      abi: SafirePool
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      file: ./src/pool.ts
+      entities:
+        - InsurancePool
+        - Token
+      abis:
+        - name: SafirePool
+          file: ./abis/SafirePool.json
+      eventHandlers:
+        - event: InsuranceBought(indexed address,address,uint256)
+          handler: handleInsuranceBought
+        - event: InsuranceSold(indexed address,address,uint256)
+          handler: handleInsuranceSold
+        - event: StateChanged(uint8,uint8)
+          handler: handleStateChanged
+        - event: Withdrew(address,uint256,indexed address)
+          handler: handleWithdrew
+
+
+
+  

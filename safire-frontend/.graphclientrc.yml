@@ -1,9 +1,9 @@
 # .graphclientrc.yml
 sources:
-  - name: azurance
+  - name: safire
     handler:
       graphql:
-        endpoint: https://api.studio.thegraph.com/query/67556/azurance/version/latest
+        endpoint: https://api.studio.thegraph.com/query/99901/safire/version/latest
 
 
 documents:
