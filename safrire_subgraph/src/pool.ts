@@ -1,5 +1,5 @@
 import { Address, BigInt } from "@graphprotocol/graph-ts";
-import { AzurancePool, InsuranceBought, InsuranceSold, StateChanged, Withdrew } from "../generated/AzuranceFactory/AzurancePool";
+import { SafirePool, InsuranceBought, InsuranceSold, StateChanged, Withdrew } from "../generated/SafireFactory/SafirePool";
 import { InsurancePool } from "../generated/schema";
 
 export function handleInsuranceBought(event: InsuranceBought): void {
@@ -26,7 +26,7 @@ function updatePoolValue(address: Address): InsurancePool | null {
     let id = address.toHex();
     let pool = InsurancePool.load(id);
 
-    let instance = AzurancePool.bind(address);
+    let instance = SafirePool.bind(address);
 
     let buyerShares = instance.try_totalBuyShare();
     let sellerShares = instance.try_totalSellShare();
