@@ -24,20 +24,3 @@ dataSources:
         - event: InsuranceCreated(indexed address,indexed address,indexed address)
           handler: handleInsuranceCreated
       file: ./src/safire-factory.ts
-  - kind: ethereum
-    name: Contract
-    network: base-sepolia
-    source:
-      address: "0x0b828e93e6c763530a77866d8afe7630ed3bd12a"
-      abi: Contract
-      startBlock: 20124112
-    mapping:
-      kind: ethereum/events
-      apiVersion: 0.0.7
-      language: wasm/assemblyscript
-      entities: null
-      abis:
-        - name: Contract
-          file: ./abis/Contract.json
-      eventHandlers: null
-      file: ./src/contract.ts
