@@ -1,0 +1,9 @@
+type InsuranceCreated @entity(immutable: true) {
+  id: Bytes!
+  creator: Bytes! # address
+  target: Bytes! # address
+  asset: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}

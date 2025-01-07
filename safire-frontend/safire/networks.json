@@ -1,0 +1,8 @@
+{
+  "base-sepolia": {
+    "SafireFactory": {
+      "address": "0x4dc12173a439e96a31a56850550db1aec2d60631",
+      "startBlock": 20208568
+    }
+  }
+}

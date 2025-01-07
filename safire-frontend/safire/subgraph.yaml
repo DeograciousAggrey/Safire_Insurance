@@ -1,0 +1,26 @@
+specVersion: 1.0.0
+indexerHints:
+  prune: auto
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: SafireFactory
+    network: base-sepolia
+    source:
+      address: "0x4dc12173a439e96a31a56850550db1aec2d60631"
+      abi: SafireFactory
+      startBlock: 20208568
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - InsuranceCreated
+      abis:
+        - name: SafireFactory
+          file: ./abis/SafireFactory.json
+      eventHandlers:
+        - event: InsuranceCreated(indexed address,indexed address,indexed address)
+          handler: handleInsuranceCreated
+      file: ./src/safire-factory.ts
