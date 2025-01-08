@@ -1,35 +1,24 @@
-import {
-  Approval as ApprovalEvent,
-  Transfer as TransferEvent,
-} from "../generated/Contract/Contract"
-import { Approval, Transfer } from "../generated/schema"
+import { Address, BigInt } from "@graphprotocol/graph-ts";
+import { Token } from "../generated/schema";
+import { ERC20 } from "../generated/SafireFactory/ERC20";
 
-export function handleApproval(event: ApprovalEvent): void {
-  let entity = new Approval(
-    event.transaction.hash.concatI32(event.logIndex.toI32()),
-  )
-  entity.owner = event.params.owner
-  entity.spender = event.params.spender
-  entity.value = event.params.value
+export function getOrCreateToken(address: Address): Token {
+  let id = address.toHex();
+  let token = Token.load(id);
+  if (token == null) {
+    token = new Token(id);
 
-  entity.blockNumber = event.block.number
-  entity.blockTimestamp = event.block.timestamp
-  entity.transactionHash = event.transaction.hash
+    let instance = ERC20.bind(address);
+    let name = instance.try_name();
+    let symbol = instance.try_symbol();
+    let decimals = instance.try_decimals();
 
-  entity.save()
-}
+    if (!name.reverted) token.name = name.value;
+    if (!symbol.reverted) token.symbol = symbol.value;
+    if (!decimals.reverted) token.decimals = decimals.value;
 
-export function handleTransfer(event: TransferEvent): void {
-  let entity = new Transfer(
-    event.transaction.hash.concatI32(event.logIndex.toI32()),
-  )
-  entity.from = event.params.from
-  entity.to = event.params.to
-  entity.value = event.params.value
+    token.save();
+  }
 
-  entity.blockNumber = event.block.number
-  entity.blockTimestamp = event.block.timestamp
-  entity.transactionHash = event.transaction.hash
-
-  entity.save()
+  return token;
 }
