@@ -12,8 +12,8 @@ query ActiveInsurance($first: Int = 100, $skip: Int = 0) {
     fee
     feeDecimals
     feeTo
-    maturityTimestamp
-    staleTimestamp
+    maturityBlock
+    staleBlock
     multiplier
     multiplierDecimals
     buyerValue

@@ -9,8 +9,8 @@ query InactiveInsurance(
     fee
     feeDecimals
     feeTo
-    maturityTimestamp
-    staleTimestamp
+    maturityBlock
+    staleBlock
     multiplier
     multiplierDecimals
     buyerValue
