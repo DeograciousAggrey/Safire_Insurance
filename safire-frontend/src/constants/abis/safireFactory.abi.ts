@@ -1,7 +1,7 @@
-export const AZURANCE_FACTORY_ABI = [
+export const SAFIRE_FACTORY_ABI = [
   {
     "type": "function",
-    "name": "createAzuranceContract",
+    "name": "createSafireContract",
     "inputs": [
       {
         "name": "multiplier_",

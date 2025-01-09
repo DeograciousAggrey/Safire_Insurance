@@ -1,4 +1,4 @@
-export const AZURANCE_POOL_ABI = [
+export const SAFIRE_POOL_ABI = [
   {
     "type": "constructor",
     "inputs": [
@@ -339,7 +339,7 @@ export const AZURANCE_POOL_ABI = [
       {
         "name": "",
         "type": "uint8",
-        "internalType": "enum IAzurancePool.State"
+        "internalType": "enum ISafirePool.State"
       }
     ],
     "stateMutability": "view"
@@ -519,13 +519,13 @@ export const AZURANCE_POOL_ABI = [
         "name": "oldState",
         "type": "uint8",
         "indexed": false,
-        "internalType": "enum IAzurancePool.State"
+        "internalType": "enum ISafirePool.State"
       },
       {
         "name": "newState",
         "type": "uint8",
         "indexed": false,
-        "internalType": "enum IAzurancePool.State"
+        "internalType": "enum ISafirePool.State"
       }
     ],
     "anonymous": false

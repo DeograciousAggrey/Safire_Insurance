@@ -1,4 +1,4 @@
-import { AZURANCE_FACTORY_ABI } from "@/constants/abis/azuranceFactory.abi";
+import { AZURANCE_FACTORY_ABI } from "@/constants/abis/safireFactory.abi";
 import { CONTRACT_ADDRESS } from "@/constants/address.constant";
 import { ethers } from "ethers";
 

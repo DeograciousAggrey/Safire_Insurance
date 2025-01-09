@@ -1,4 +1,4 @@
-import { IAzurance } from "../../../types/azurance";
+import { ISafire } from "../../../types/safire";
 import { InsuranceType } from "../insurance/insurance.type";
 
 export interface IFavoriteState {

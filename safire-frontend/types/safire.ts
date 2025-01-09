@@ -1,4 +1,4 @@
-export interface IAzurance {
+export interface ISafire {
   id: string;
   insuranceName: string;
   symbol: string;

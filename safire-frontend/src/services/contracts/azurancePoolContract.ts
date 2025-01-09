@@ -1,4 +1,4 @@
-import { AZURANCE_POOL_ABI } from "@/constants/abis/azurancePool.abi";
+import { SAFIRE_POOL_ABI } from "@/constants/abis/safirePool.abi";
 import { CONTRACT_ADDRESS } from "@/constants/address.constant";
 import { ethers } from "ethers";
 
@@ -6,7 +6,7 @@ const azurancePoolContract = (
   contractAddress: string,
   provider: ethers.Signer | ethers.providers.Provider
 ) => {
-  return new ethers.Contract(contractAddress, AZURANCE_POOL_ABI, provider);
+  return new ethers.Contract(contractAddress, SAFIRE_POOL_ABI, provider);
 };
 
 const buyInsurance = async (

@@ -13,7 +13,7 @@ export default function MetaMaskProvider({
         },
         checkInstallationImmediately: false,
         dappMetadata: {
-          name: "Shout Protocol",
+          name: "Safire Protocol",
           // url: window.location.host,
         },
       }}
