@@ -7,7 +7,7 @@ const Claim = () => {
   return (
     <>
       <Head>
-        <title>Azurance - Claim</title>
+        <title>Safire - Claim</title>
       </Head>
       <div>
         <TopBanner

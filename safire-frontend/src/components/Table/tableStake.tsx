@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { columnsStake, columnsStakeClaimable } from "@/constants/mockTableData";
 import { formatDecimal } from "@/utils/formatNumber";
-import { AzuranceSelcet } from "./AzuranceSelect";
+import { SafireSelcet } from "./SafireSelect";
 import { Button, useDisclosure } from "@nextui-org/react";
 import { StarIcon } from "@heroicons/react/24/outline";
 import { useFavoriteStore } from "@/store/favorite/favorite.store";
@@ -235,7 +235,7 @@ export default function TableStake() {
     <div className="bg-white w-full mt-5 rounded-xl ">
       <div className="flex items-center justify-between p-4">
         <div>
-          <AzuranceSelcet
+          <SafireSelcet
             tabSelect={tabClaimSelect}
             filter={filter}
             setFilter={setFilter}

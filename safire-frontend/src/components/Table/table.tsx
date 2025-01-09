@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { columns } from "@/constants/mockTableData";
 import { formatDecimal } from "@/utils/formatNumber";
 import PercentageBar from "../Slide/PercentageBar";
-import { AzuranceSelcet } from "./AzuranceSelect";
+import { SafireSelcet } from "./SafireSelect";
 import { Button, useDisclosure } from "@nextui-org/react";
 import { StarIconSolid } from "../../../public/icons/StarIconSolid";
 import { StarIcon } from "@heroicons/react/24/outline";
@@ -21,7 +21,7 @@ import TooltipWarning from "../Tooltip/TooltipWarning";
 import NotiIcon from "../Icon/NotiIcon";
 import { CHAINS } from "@/constants/chain.constant";
 
-export default function AzuranceTable() {
+export default function SafireTable() {
   const [filter, setFilter] = useState("Ongoing");
   const { insurances: insuranceList, fetchInsurances } = useInsurances(
     100,
@@ -138,7 +138,7 @@ export default function AzuranceTable() {
     <div className="bg-white w-full mt-5 rounded-xl">
       <div className="flex items-center justify-between p-4">
         <div>
-          <AzuranceSelcet
+          <SafireSelcet
             tabSelect={tabSelect}
             filter={filter}
             setFilter={setFilter}

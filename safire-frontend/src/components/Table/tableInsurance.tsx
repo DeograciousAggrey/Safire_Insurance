@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { columnsInsurance } from "@/constants/mockTableData";
 import { formatDecimal } from "@/utils/formatNumber";
 import PercentageBar from "../Slide/PercentageBar";
-import { AzuranceSelcet } from "./AzuranceSelect";
+import { SafireSelcet } from "./SafireSelect";
 import { Button, useDisclosure } from "@nextui-org/react";
 import { StarIconSolid } from "../../../public/icons/StarIconSolid";
 import { ArrowDownTrayIcon, StarIcon } from "@heroicons/react/24/outline";
@@ -151,7 +151,7 @@ export default function TableInsurance() {
     <div className="bg-white w-full mt-5 rounded-xl">
       <div className="flex items-center justify-between p-4">
         <div>
-          <AzuranceSelcet
+          <SafireSelcet
             tabSelect={tabSelect}
             filter={filter}
             setFilter={setFilter}
@@ -292,8 +292,8 @@ export default function TableInsurance() {
                   <td className="text-start px-4">
                     <Button
                       className={`w-30 px-4 text-xs font-semibold border-1 ${isDisable
-                          ? "bg-[#EAEBEF] text-[#BCBEC9] border-[#EAEBEF]"
-                          : "bg-white text-[#0F1419] border-[#D0D5DD]"
+                        ? "bg-[#EAEBEF] text-[#BCBEC9] border-[#EAEBEF]"
+                        : "bg-white text-[#0F1419] border-[#D0D5DD]"
                         }`}
                       onClick={() => handleSelect(index)}
                       isDisabled={isDisable}

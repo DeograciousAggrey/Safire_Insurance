@@ -5,7 +5,7 @@ export const CREATE_POST = gql(`
     createPost(
       post: {
         ipfsHash: $ipfsHash
-        chainId: "0x5"
+        chainId: "0x14a34"
         ownerId: $ownerId
       }
     ){

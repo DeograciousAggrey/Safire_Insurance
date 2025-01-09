@@ -7,17 +7,17 @@ import {
   TabPanel,
 } from "@material-tailwind/react";
 
-interface AzuranceSelectProps {
+interface SafireSelectProps {
   tabSelect: Array<any>;
   filter: string;
   setFilter: (filter: string) => void;
 }
 
-export function AzuranceSelcet({
+export function SafireSelcet({
   tabSelect,
   filter,
   setFilter,
-}: AzuranceSelectProps) {
+}: SafireSelectProps) {
   return (
     <div className="bg-gray-100 rounded-lg flex items-center  p-[1px] space-x-3">
       <Tabs value={filter}>

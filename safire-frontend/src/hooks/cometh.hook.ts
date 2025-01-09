@@ -28,7 +28,7 @@ export const useCometh = () => {
         setWalletAddress(instance.getAddress());
         setWalletType(WalletType.cometh);
         setIsSuccess(true);
-        setCurrentChainId("0x13881");
+        setCurrentChainId("0x14a34");
       }
       setIsLoading(false);
     } catch (e) {

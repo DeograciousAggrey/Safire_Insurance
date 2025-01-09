@@ -108,13 +108,13 @@ export default function WalletModal({ isOpen, onOpenChange }: IWalletModal) {
         <>
           <ModalHeader className="flex items-center space-x-3">
             <Image
-              src="/azurance-logo.png"
+              src="/safire-logo.png"
               alt="Shout Logo"
               width={121}
               height={32}
             />
             {/* <p className="text-[#0F1419] font-bold text-base ml-3">
-                Azurance
+                Safire
               </p> */}
           </ModalHeader>
           <ModalBody className=" my-5 ">

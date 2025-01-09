@@ -3,7 +3,7 @@ import TopBanner from "@/components/TopBanner";
 import Head from "next/head";
 import React from "react";
 
-type Azurance = {
+type Safire = {
   id: string,
   name: string,
   symbol: string,
@@ -30,7 +30,7 @@ const Liquidity = () => {
   return (
     <>
       <Head>
-        <title>Azurance - Liquidity</title>
+        <title>Safire - Liquidity</title>
       </Head>
       <div>
         <TopBanner

@@ -21,8 +21,8 @@ export const useInsurances = (limit = 100, offset = 0, filter = "Ongoing") => {
           ...item,
           name: item.buyerToken.name.replace("-BUY", ""),
           symbol: item.buyerToken.symbol.replace("-BUY", ""),
-          maturityTime: item.maturityTimestamp,
-          staleTime: item.staleTimestamp,
+          maturityTime: item.maturityBlock,
+          staleTime: item.staleBlock,
         }))
       );
   }, [limit, offset, filter]);
@@ -30,8 +30,8 @@ export const useInsurances = (limit = 100, offset = 0, filter = "Ongoing") => {
   const computedInsurances = useMemo(() => {
     return insurances.map((item) => ({
       ...item,
-      maturityTime: item.maturityTimestamp,
-      staleTime: item.staleTimestamp,
+      maturityTime: item.maturityBlock,
+      staleTime: item.staleBlock,
     }));
   }, [insurances, secondsPerBlock]);
 
