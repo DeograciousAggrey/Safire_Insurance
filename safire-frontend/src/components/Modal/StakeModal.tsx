@@ -20,7 +20,7 @@ import { useProvider } from "@/hooks/provider.hook";
 import { ethers } from "ethers";
 import tokenContractService from "@/services/contracts/mintableTokenContract.service";
 import { formatDecimal } from "@/utils/formatNumber";
-import azurancePoolContractService from "@/services/contracts/azurancePoolContract";
+import azurancePoolContractService from "@/services/contracts/safirePoolContract";
 import { getDownloadURL, ref } from "firebase/storage";
 import { storage } from "@/utils/firebaseStorage";
 import { useWalletStore } from "@/store/wallet/wallet.store";

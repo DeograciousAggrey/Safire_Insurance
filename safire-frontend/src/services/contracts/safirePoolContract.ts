@@ -2,7 +2,7 @@ import { SAFIRE_POOL_ABI } from "@/constants/abis/safirePool.abi";
 import { CONTRACT_ADDRESS } from "@/constants/address.constant";
 import { ethers } from "ethers";
 
-const azurancePoolContract = (
+const safirePoolContract = (
   contractAddress: string,
   provider: ethers.Signer | ethers.providers.Provider
 ) => {
@@ -14,7 +14,7 @@ const buyInsurance = async (
   provider: ethers.Signer | ethers.providers.Provider,
   amount: number | ethers.BigNumber,
 ) => {
-  const contract = azurancePoolContract(contractAddress, provider);
+  const contract = safirePoolContract(contractAddress, provider);
   const tx = await contract.buyInsurance(amount);
   await tx.wait();
   return tx;
@@ -25,7 +25,7 @@ const sellInsurance = async (
   provider: ethers.Signer | ethers.providers.Provider,
   amount: number | ethers.BigNumber,
 ) => {
-  const contract = azurancePoolContract(contractAddress, provider);
+  const contract = safirePoolContract(contractAddress, provider);
   const tx = await contract.sellInsurance(amount);
   await tx.wait();
   return tx;
@@ -35,7 +35,7 @@ const checkUnlockClaim = async (
   contractAddress: string,
   provider: ethers.Signer | ethers.providers.Provider,
 ) => {
-  const contract = azurancePoolContract(contractAddress, provider);
+  const contract = safirePoolContract(contractAddress, provider);
   const tx = await contract.checkUnlockClaim();
   await tx.wait();
   return tx;
@@ -45,7 +45,7 @@ const unlockMaturity = async (
   contractAddress: string,
   provider: ethers.Signer | ethers.providers.Provider,
 ) => {
-  const contract = azurancePoolContract(contractAddress, provider);
+  const contract = safirePoolContract(contractAddress, provider);
   const tx = await contract.unlockMaturity();
   await tx.wait();
   return tx;
@@ -55,7 +55,7 @@ const checkUnlockTerminate = async (
   contractAddress: string,
   provider: ethers.Signer | ethers.providers.Provider,
 ) => {
-  const contract = azurancePoolContract(contractAddress, provider);
+  const contract = safirePoolContract(contractAddress, provider);
   const tx = await contract.checkUnlockTerminate();
   await tx.wait();
   return tx;
@@ -67,14 +67,14 @@ const withdraw = async (
   buyerAmount: number | ethers.BigNumber,
   sellerAmount: number | ethers.BigNumber,
 ) => {
-  const contract = azurancePoolContract(contractAddress, provider);
+  const contract = safirePoolContract(contractAddress, provider);
   const tx = await contract.withdraw(buyerAmount, sellerAmount);
   await tx.wait();
   return tx;
 };
 
-const azurancePoolContractService = {
-  azurancePoolContract,
+const safirePoolContractService = {
+  safirePoolContract,
   buyInsurance,
   sellInsurance,
   checkUnlockClaim,
@@ -82,4 +82,4 @@ const azurancePoolContractService = {
   checkUnlockTerminate,
   withdraw
 };
-export default azurancePoolContractService;
+export default safirePoolContractService;

@@ -19,7 +19,7 @@ export default function Notifications() {
         <p className="text-xl font-semibold">Notifications</p>
       </div>
       <div className="flex justify-center items-center w-full h-[100px]">
-        <p>You are all catch up :)</p>
+        <p>You are all caught up :)</p>
       </div>
       {/* <NotificationItem
         name="Spark Protocol"

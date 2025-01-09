@@ -4,7 +4,7 @@ import { times } from "@/constants/time.constant";
 import { tokens } from "@/constants/token";
 import { yieldPlatformObj, yieldPlatforms } from "@/constants/yieldPlatform";
 import { useProvider } from "@/hooks/provider.hook";
-import azuranceFactoryContractService from "@/services/contracts/azuranceFactoryContract";
+import safireFactoryContractService from "@/services/contracts/safireFactoryContract";
 import { useWalletStore } from "@/store/wallet/wallet.store";
 import {
   Button,
@@ -108,7 +108,7 @@ const CreateInsuranceModal = ({
           const symbol = insurance.symbol;
 
           const tx =
-            await azuranceFactoryContractService.createAzuranceContract(
+            await safireFactoryContractService.createSafireContract(
               contractAddress,
               signer,
               multipler,

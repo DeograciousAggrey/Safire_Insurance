@@ -1,15 +1,15 @@
-import { AZURANCE_FACTORY_ABI } from "@/constants/abis/safireFactory.abi";
+import { SAFIRE_FACTORY_ABI } from "@/constants/abis/safireFactory.abi";
 import { CONTRACT_ADDRESS } from "@/constants/address.constant";
 import { ethers } from "ethers";
 
-const azuranceFactoryContract = (
+const safireFactoryContract = (
   contractAddress: string,
   provider: ethers.Signer | ethers.providers.Provider
 ) => {
-  return new ethers.Contract(contractAddress, AZURANCE_FACTORY_ABI, provider);
+  return new ethers.Contract(contractAddress, SAFIRE_FACTORY_ABI, provider);
 };
 
-const createAzuranceContract = async (
+const createSafireContract = async (
   contractAddress: string,
   provider: ethers.Signer | ethers.providers.Provider,
   multiplier: number | ethers.BigNumber,
@@ -22,8 +22,8 @@ const createAzuranceContract = async (
   name: string,
   symbol: string
 ) => {
-  const contract = azuranceFactoryContract(contractAddress, provider);
-  const tx = await contract.createAzuranceContract(
+  const contract = safireFactoryContract(contractAddress, provider);
+  const tx = await contract.createSafireContract(
     multiplier,
     maturityBlock,
     staleBlock,
@@ -38,8 +38,8 @@ const createAzuranceContract = async (
   return tx;
 };
 
-const azuranceFactoryContractService = {
-  azuranceFactoryContract,
-  createAzuranceContract,
+const safireFactoryContractService = {
+  safireFactoryContract,
+  createSafireContract,
 };
-export default azuranceFactoryContractService;
+export default safireFactoryContractService;

@@ -12,17 +12,17 @@ type ChainInfo = {
 }
 
 export const CHAINS: Record<string, ChainInfo> = {
-  "0xa869": {
-    chainId: "0xa869",
-    rpcUrls: ["https://api.avax-test.network/ext/bc/C/rpc"],
-    chainName: "Avalanche Fuji Testnet",
+  "0x14a34": {
+    chainId: "0x14a34",
+    rpcUrls: ["https://sepolia.base.org"],
+    chainName: "Base Sepolia Testnet",
     iconPath: "/chain/icon-avax.png",
     nativeCurrency: {
-      name: "Avalanche Fuji Testnet",
-      symbol: "AVAX",
+      name: "Base Sepolia Testnet",
+      symbol: "ETH",
       decimals: 18,
     },
-    blockExplorerUrls: ["https://testnet.snowtrace.io"],
+    blockExplorerUrls: ["https://sepolia.basescan.org/"],
   },
   // "0x66eed": {
   //   chainId: "0x66eed",

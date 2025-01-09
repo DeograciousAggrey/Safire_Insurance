@@ -1,6 +1,6 @@
 import { tokens } from "@/constants/token";
 import { useProvider } from "@/hooks/provider.hook";
-import azurancePoolContractService from "@/services/contracts/azurancePoolContract";
+import azurancePoolContractService from "@/services/contracts/safirePoolContract";
 import tokenContractService from "@/services/contracts/tokenContract.service";
 import { InsuranceType } from "@/store/insurance/insurance.type";
 import { formatDecimal } from "@/utils/formatNumber";
