@@ -15,13 +15,13 @@ const Footer = () => {
               className="select-none cursor-pointer flex items-center"
             >
               <Image
-                src="/azurance-logo.png"
+                src="/safire-logo.png"
                 alt="Shout Logo"
                 width={108}
                 height={28}
               />
               {/* <p className="text-[#0F1419] font-semibold text-sm ml-2">
-                Azurance
+                Safire
               </p> */}
             </div>
             <p className=" text-sm font-normal text-[#0F1419] mt-3">
@@ -36,7 +36,7 @@ const Footer = () => {
           <div>
             <p className="text-[#0F1419] font-semibold text-sm ">Newsletter</p>
             <p className="text-sm font-normal my-2 text-[#5B616E]">
-              Stay up to date on all things Azurance.
+              Stay up to date on all things Safire.
             </p>
             <div className="flex justify-between pt-2">
               <Input
@@ -56,7 +56,7 @@ const Footer = () => {
       <div className="w-full flex justify-center h-14 py-3 bg-gradient-to-b from-blue-600 to-blue-700 ">
         <div className="flex w-full max-w-[1200px]">
           <p className="my-auto text-xs  text-white font-medium">
-            Copyright © Azurance 2023. All Rights Reserved.
+            Copyright © Safire 2023. All Rights Reserved.
           </p>
         </div>
       </div>

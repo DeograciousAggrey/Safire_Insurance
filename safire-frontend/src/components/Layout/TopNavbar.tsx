@@ -43,12 +43,12 @@ export default function TopNavbar() {
           className="select-none cursor-pointer flex items-center"
         >
           <Image
-            src="/azurance-logo.png"
-            alt="Shout Logo"
+            src="/safire-logo.png"
+            alt="Safire Logo"
             width={136}
             height={36}
           />
-          {/* <p className="text-[#0F1419] font-bold text-2xl ml-3">Azurance</p> */}
+          {/* <p className="text-[#0F1419] font-bold text-2xl ml-3">Safire</p> */}
         </div>
       </NavbarBrand>
       <NavbarContent justify="start">

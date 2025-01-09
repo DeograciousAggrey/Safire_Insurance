@@ -20,7 +20,7 @@ import { useProvider } from "@/hooks/provider.hook";
 import { ethers } from "ethers";
 import tokenContractService from "@/services/contracts/mintableTokenContract.service";
 import { formatDecimal } from "@/utils/formatNumber";
-import azurancePoolContractService from "@/services/contracts/safirePoolContract";
+import safirePoolContractService from "@/services/contracts/safirePoolContract";
 import { getDownloadURL, ref } from "firebase/storage";
 import { storage } from "@/utils/firebaseStorage";
 import { useWalletStore } from "@/store/wallet/wallet.store";
@@ -144,7 +144,7 @@ const StakeModal = ({
     if (provider) {
       try {
         const signer = provider?.getSigner();
-        await azurancePoolContractService.unlockMaturity(insurance.id, signer);
+        await safirePoolContractService.unlockMaturity(insurance.id, signer);
         onInsuranceUpdate();
         onOpenUnlock();
         onClose();
@@ -158,7 +158,7 @@ const StakeModal = ({
     if (provider) {
       try {
         const signer = provider?.getSigner();
-        await azurancePoolContractService.buyInsurance(
+        await safirePoolContractService.buyInsurance(
           insurance.id,
           signer,
           ethers.utils.parseEther(amount)
@@ -184,12 +184,12 @@ const StakeModal = ({
       try {
         const signer = provider?.getSigner();
         if (now > insurance.maturityTime) {
-          await azurancePoolContractService.unlockMaturity(
+          await safirePoolContractService.unlockMaturity(
             insurance.id,
             signer
           );
         } else {
-          await azurancePoolContractService.checkUnlockClaim(
+          await safirePoolContractService.checkUnlockClaim(
             insurance.id,
             signer
           );

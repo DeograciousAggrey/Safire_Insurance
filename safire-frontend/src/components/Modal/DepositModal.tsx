@@ -1,6 +1,6 @@
 import { tokens } from "@/constants/token";
 import { useProvider } from "@/hooks/provider.hook";
-import azurancePoolContractService from "@/services/contracts/safirePoolContract";
+import safirePoolContractService from "@/services/contracts/safirePoolContract";
 import tokenContractService from "@/services/contracts/tokenContract.service";
 import { InsuranceType } from "@/store/insurance/insurance.type";
 import { formatDecimal } from "@/utils/formatNumber";
@@ -131,7 +131,7 @@ const DepositModal = ({
     if (provider) {
       try {
         const signer = provider?.getSigner();
-        await azurancePoolContractService.unlockMaturity(insurance.id, signer);
+        await safirePoolContractService.unlockMaturity(insurance.id, signer);
         onInsuranceUpdate();
         onOpenUnlock();
         onClose();
@@ -145,7 +145,7 @@ const DepositModal = ({
     if (provider) {
       try {
         const signer = provider?.getSigner();
-        await azurancePoolContractService.sellInsurance(
+        await safirePoolContractService.sellInsurance(
           insurance.id,
           signer,
           ethers.utils.parseEther(amount)
@@ -305,7 +305,7 @@ const DepositModal = ({
         onOpenChange={onOpenChangeDeposit}
         isFooter={false}
         title="Deposit successfully"
-        description="Your azurance has been successfully deposited."
+        description="Your safire has been successfully deposited."
       />
       <StatusModal
         isOpen={isOpenUnlockModal}
