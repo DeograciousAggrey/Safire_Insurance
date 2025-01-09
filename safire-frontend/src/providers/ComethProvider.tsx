@@ -12,6 +12,7 @@ import { WalletType } from "@/store/wallet/wallet.type";
 import { Spinner } from "@nextui-org/spinner";
 
 const API_KEY = process.env.NEXT_PUBLIC_COMETH_API_KEY || "";
+const CHAIN_ID = process.env.NEXT_PUBLIC_CHAIN_ID;
 
 export default function ComethProvider({
   children,
@@ -26,7 +27,7 @@ export default function ComethProvider({
   useEffect(() => {
     setLoading(true);
     const walletAdaptor = new ConnectAdaptor({
-      chainId: SupportedNetworks.MUMBAI,
+      chainId: SupportedNetworks.BASE_SEPOLIA,
       apiKey: API_KEY,
     });
 
