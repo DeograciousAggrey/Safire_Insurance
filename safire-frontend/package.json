@@ -10,7 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@apollo/client": "^3.8.6",
+    "@apollo/client": "^3.12.5",
     "@cometh/connect-sdk": "^1.2.31",
     "@graphprotocol/client-urql": "^2.0.0",
     "@heroicons/react": "^2.0.18",
