@@ -16,7 +16,7 @@ export const CHAINS: Record<string, ChainInfo> = {
     chainId: "0x14a34",
     rpcUrls: ["https://sepolia.base.org"],
     chainName: "Base Sepolia Testnet",
-    iconPath: "/chain/icon-avax.png",
+    iconPath: "/chain/base.png",
     nativeCurrency: {
       name: "Base Sepolia Testnet",
       symbol: "ETH",

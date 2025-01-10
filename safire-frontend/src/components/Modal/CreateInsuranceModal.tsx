@@ -90,15 +90,15 @@ const CreateInsuranceModal = ({
             currentTs + Math.floor(Number(insurance.expiration) * 0.8);
 
           const contractAddress =
-            CONTRACT_ADDRESS[currentChainId]["AzruanceFactory"];
+            CONTRACT_ADDRESS[currentChainId]["SafireFactory"];
           const multipler =
             insurance.benefitMultiplier * Math.pow(10, multiplerDecimals);
 
-          // const maturityBlock = Math.floor(maturityTs / secondsPerBlock);
-          // const staleBlock = Math.floor(staleTs / secondsPerBlock);
+          const maturityBlock = Math.floor(maturityTs / secondsPerBlock);
+          const staleBlock = Math.floor(staleTs / secondsPerBlock);
 
-          const maturityTimestamp = Math.floor(maturityTs);
-          const staleTimestamp = Math.floor(staleTs);
+          //const maturityTimestamp = Math.floor(maturityTs);
+          //const staleTimestamp = Math.floor(staleTs);
 
           const asset = CONTRACT_ADDRESS[currentChainId][insurance.token];
           const fee = 0;
@@ -112,8 +112,8 @@ const CreateInsuranceModal = ({
               contractAddress,
               signer,
               multipler,
-              maturityTimestamp,
-              staleTimestamp,
+              maturityBlock,
+              staleBlock,
               asset,
               fee,
               feeTo,
