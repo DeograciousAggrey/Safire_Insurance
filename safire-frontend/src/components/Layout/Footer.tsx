@@ -53,10 +53,13 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="w-full flex justify-center h-14 py-3 bg-gradient-to-b from-blue-600 to-blue-700 ">
+      <div
+        className="h-12 py-3 relative w-full flex justify-center"
+        style={{ backgroundColor: '#4b24af' }}
+      >
         <div className="flex w-full max-w-[1200px]">
           <p className="my-auto text-xs  text-white font-medium">
-            Copyright © Safire 2023. All Rights Reserved.
+            Copyright © Safire 2025. All Rights Reserved.
           </p>
         </div>
       </div>

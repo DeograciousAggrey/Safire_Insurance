@@ -23,7 +23,7 @@ export default function MainLayout({
       {!isOpen && <TopNoti setOpen={setIsOpen} />}
       <TopNavbar />
       <main
-        className={`${inter.className} custom-light w-full bg-[#F4F4F5]  flex e3r4 justify-center min-h-screen `}
+        className={`${inter.className} custom-light w-full bg-[#e6e6fa]  flex e3r4 justify-center min-h-screen `}
       >
         <div className="w-full max-w-[1200px] px-6 pb-32">{children}</div>
       </main>

@@ -6,8 +6,10 @@ type TopNotiTypes = {
 };
 const TopNoti = ({ setOpen }: TopNotiTypes) => {
   return (
-    <div className="h-12 py-3 relative bg-gradient-to-b from-blue-600 to-blue-700 w-full flex justify-center">
-      <h1 className=" text-white text-xs my-auto font-medium">
+    <div
+      className="h-12 py-3 relative w-full flex justify-center"
+      style={{ backgroundColor: '#4b24af' }}
+    > <h1 className=" text-white text-xs my-auto font-medium">
         Safire is still in testing phase.
       </h1>
 

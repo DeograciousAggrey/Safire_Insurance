@@ -472,7 +472,7 @@ const CreateInsuranceModal = ({
         isFooter={false}
         isOpen={isOpenSuccess}
         isLoading={false}
-        title="Create insurance successfully"
+        title="Created insurance successfully"
         description="Your insurance has been successfully created"
         onOpenChange={onOpenChangeSuccess}
       />
