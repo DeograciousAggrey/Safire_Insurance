@@ -50,13 +50,76 @@ More information about the contracts can be found in the `contracts` directory, 
 
 
 ## HOW IT WORKS
-1. **Create a Contract**: Users can create a new insurance contract by specifying the risk event, coverage amount, and contract period.
+1. **Create an Insurance Contract**: Users can create a new insurance contract by specifying the risk event, coverage amount, and contract period.
 
-2. **Invest in a Contract**: Users can invest in existing insurance contracts by contributing liquidity to the contract's pool.
+![Create an Insurance Contract](https://github.com/user-attachments/assets/c20654d1-bbea-448d-9996-9c9303ced1f9)
 
-3. **Claim Payouts**: If the specified risk event occurs, policyholders can claim their payouts instantly.
+      -The user will provide the required details to create the insurance contract.
+      - Add a multiplier to the contract to determine the payout amount.
+      - specify the expiration date of the contract.
+      - Specify the condition that the insurance contract will be based on.
+  
+  ***Condition Contract***
+  This is the condition that the insurance contract will be based on. The condition contract will be deployed to the blockchain and the address will be used to create the insurance contract. e.g The condition below is based on the price of ETH.
+    ![Condition Contract](https://github.com/user-attachments/assets/7f0871ef-899f-4da5-9526-1b648eca209f)
 
-4. **Earn Returns**: If the contract period expires without the triggering event, liquidity providers can withdraw their principal and accrued yields.
+
+
+
+2. **Deposit into the  Contract**: This adds liquidity to the insurance contract, allowing users to invest in the contract.
+
+![Deposit into the Contract](https://github.com/user-attachments/assets/40f41ef3-c8f7-438d-9754-a3d5020750d0)
+
+
+
+### BUYER'S VIEW
+1. **Buy Insurance**: Users can purchase insurance by investing in the insurance contract, to hedge against the specified risk event.
+
+  ![Buy Insurance](https://github.com/user-attachments/assets/22c7c53f-1cce-4f67-a287-05ace136e91c)
+
+
+
+
+2. **Claim Payouts**: If the specified risk event occurs, user can claim their payouts.
+
+  ![Claim Payouts](https://github.com/user-attachments/assets/a083a0a3-2b0f-4adb-a0d6-0873c7db0393)
+
+
+3. **Earn Returns**: If the contract period expires without the triggering event, liquidity providers can withdraw their principal and accrued yields.
+
+4. **Faucet**: Users can request testnet tokens from the faucet to interact with the platform.
+
+![Faucet](https://github.com/user-attachments/assets/cdc53e09-45ec-42c8-90b6-6ab5b28ffe88)
+
+
+## HOW TO RUN THE PROJECT LOCALLY
+1. **Clone the Repository**: Clone the repository to your local machine using the command below.
+```bash
+git clone https://github.com/DeograciousAggrey/Safire_Insurance
+```
+
+2. **Deploy the Smart Contracts**: Deploy the smart contracts to the blockchain, ensure  you have the necessary environment variables set up. You can find the contracts in the `contracts` directory. Use the commands directory to deploy the contracts.
+
+3. **Running the graphql server**: Navigate to the subgraph directory and setup your graph node and deploy it to the network. More information about setting up the graph node can be found [here](https://thegraph.com/docs/quick-start). After setting up the graph node, run the following commands to deploy the subgraph to the network.
+```bash
+npm codegen && npm build && npm deploy
+```
+
+
+4. **Running the Frontend**: Navigate to the `frontend` directory and run the following commands. Ensure you have the necessary environment variables set up.
+```bash
+npm install
+```
+5. **Start the Frontend**: Start the frontend using the command below.
+```bash
+npm run dev
+```
+
+
+
+
+
+
 
 ## TECHNOLOGIES
 - **Solidity**: Smart contract development
