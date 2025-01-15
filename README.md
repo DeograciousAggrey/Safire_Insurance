@@ -36,6 +36,15 @@ table of contracts
 
 | Contract Name | Address |
 | --- | --- |
+|USDT | ![0x1A6e8f72f309CFA7B7Aca231E65FA1e24D4B8fB0](https://explorer.testnet.citrea.xyz/address/0x1A6e8f72f309CFA7B7Aca231E65FA1e24D4B8fB0) |
+|SimpleCondition | ![0xE36bE621c0792A2a64d5BE267EA09A4C266CCeb1](https://explorer.testnet.citrea.xyz/address/0xE36bE621c0792A2a64d5BE267EA09A4C266CCeb1) |
+|SafireFactory | ![0x98aBC61FA299693246C282C4D15A0401C239F606](https://explorer.testnet.citrea.xyz/address/0x98aBC61FA299693246C282C4D15A0401C239F606) |
+|SafirePool | ![0xB0a7f823688BdB6125780D1Ebd2940Bf32F14FD6](https://explorer.testnet.citrea.xyz/address/0xB0a7f823688BdB6125780D1Ebd2940Bf32F14FD6) |
+
+More information about the contracts can be found in the `contracts` directory, the deployed contracts can be found in the `deployments.txt` file.
+
+
+
 
 
 
